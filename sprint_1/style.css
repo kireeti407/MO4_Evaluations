@@ -1,0 +1,128 @@
+
+.container{
+    max-width: 1200px;
+
+}
+ul>li:hover{
+    color: black;
+    background-color: white;
+}
+header{
+    width: 100%;
+    background-color: gray;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+#mobile>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+    margin-top: 40px;
+    
+}
+#mobile>span{
+    border: 1px solid ;
+    margin-left: 80%;
+    background-color: blueviolet;
+}
+#mobile>ul>li{
+   
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.664);
+}
+#open{
+    height: 50px;
+    border: 1px solid;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    background-color: blueviolet;
+}
+#mobile{
+    display: inline;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 50%;
+    background-color: gray;
+    display: none;
+    
+}
+#big{
+    display: none;
+}
+#dis{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+#dis>div{
+    padding-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 5px;
+    margin: auto;
+    color: rgb(10, 10, 10);
+    
+}
+#addrecipe{
+    padding-top: 10%;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+
+}
+.container{
+    margin: auto;
+    background-color: rgba(255, 166, 0, 0.568);
+    
+}
+@media (width>500px) {
+    #open{
+        display: none;
+    }
+    #big{
+        display: flex;
+        margin-right: 5%;
+        
+    }
+    #big>ul{
+        display: flex;
+        list-style: none;
+        padding-top: 0%;
+        margin: 0%;
+        gap: 20px;
+        
+    }
+    #big>ul>li{
+        width: 100px;
+        height: 50px;
+       
+        padding-top: 0%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+}

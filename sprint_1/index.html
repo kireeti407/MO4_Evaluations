@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" /> -->
+</head>
+<body>
+    <div class="container">
+        <div id="mobile">
+            <span id="close" class="material-symbols-outlined">
+                close
+                </span>
+            <ul>
+                <li>Home</l >
+                <li>Add Recipe</li>
+                <li>view Reipes</li>
+            </ul>
+        </div>
+        <header>
+            <p style="color: rgb(255, 255, 255);font-size: 20px;margin-left: 5%;">Food Lovers</p>
+            <span id="open" class="material-symbols-outlined">
+                menu
+            </span>
+            <div id="big">
+                <ul>
+                    <li>Home</li>
+                    <li>Add Recipe</li>
+                    <li>view Reipes</li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="container">
+        <main>
+            <div id="addrecipe">
+                <h1>Add Racipe</h1>
+                <label for="name">Recipe Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" required><br><br>
+                <label for="increde">Recipe Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="" id="increde" required></textarea><br><br>
+                <label for="cat">Category</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="" id="cat" required><option value="Breakfast" >Breakfast</option><option value="Lunch">Lunch</option><option value="Dinner">Dinner</option><option value="Dessert">Dessert</option><option value="Drinks">Drinks</option></select><br><br>
+                <label for="pre">Preparation Steps</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="" id="pre" required></textarea><br><br>
+                <input type="submit" value="subbmit" id="sub">
+            </div>
+            <section>
+                <div id="dis">     </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+<script>
+    let menu=document.getElementById("open")
+    let mobile=document.getElementById("mobile")
+    let close=document.getElementById("close")
+    let header=document.querySelector("header")
+    menu.addEventListener("click",()=>{
+        mobile.style.display="inline"
+        header.style.display="none"
+        
+    })
+    close.addEventListener("click",()=>{
+        mobile.style.display="none"
+        header.style.display="inline"
+    })
+
+    let sub=document.getElementById("sub")
+    let dis=document.getElementById("dis")
+    sub.addEventListener("click",()=>{
+        let nam=document.getElementById("name")
+        let increde=document.getElementById("increde")
+        let cat=document.getElementById("cat")
+        let pre=document.getElementById("pre")
+
+        let h1=document.createElement("h1")
+        h1.innerText="Recipe Title "
+        let p=document.createElement("p")
+        p.innerText=nam.value
+        
+
+        let h2=document.createElement("h1")
+        h2.innerText="Description"
+        let p2=document.createElement("p")
+        p2.innerText=pre.value
+
+        let h3=document.createElement("h1")
+        h3.innerText=" Ingredients"
+        let p3=document.createElement("p")
+        p3.innerText=increde.value
+
+        let h4=document.createElement("h1")
+        h4.innerText="Category Label"
+        let p4=document.createElement("p")
+        p4.innerText=cat.value
+
+
+        let div=document.createElement("div")
+        div.append(h1,p,h2,p2,h3,p3,h4,p4)
+        dis.appendChild(div)
+
+    })
+</script>
+</html>
